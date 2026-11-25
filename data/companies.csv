@@ -1,0 +1,25 @@
+ticker,yahoo_symbol,name,sector
+NPN,NPN.JO,Naspers,Technology
+PRX,PRX.JO,Prosus,Technology
+MTN,MTN.JO,MTN Group,Telecoms
+VOD,VOD.JO,Vodacom Group,Telecoms
+FSR,FSR.JO,FirstRand,Financials
+SBK,SBK.JO,Standard Bank Group,Financials
+ABG,ABG.JO,Absa Group,Financials
+NED,NED.JO,Nedbank Group,Financials
+CPI,CPI.JO,Capitec Bank Holdings,Financials
+DSY,DSY.JO,Discovery,Financials
+SLM,SLM.JO,Sanlam,Financials
+OMU,OMU.JO,Old Mutual,Financials
+AGL,AGL.JO,Anglo American,Resources
+BHG,BHG.JO,BHP Group,Resources
+SOL,SOL.JO,Sasol,Resources
+IMP,IMP.JO,Impala Platinum,Resources
+GFI,GFI.JO,Gold Fields,Resources
+ANG,ANG.JO,AngloGold Ashanti,Resources
+SHP,SHP.JO,Shoprite Holdings,Consumer
+WHL,WHL.JO,Woolworths Holdings,Consumer
+MRP,MRP.JO,Mr Price Group,Consumer
+BTI,BTI.JO,British American Tobacco,Consumer
+CFR,CFR.JO,Compagnie Financiere Richemont,Consumer
+BID,BID.JO,Bid Corporation,Consumer

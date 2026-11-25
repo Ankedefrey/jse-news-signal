@@ -1,0 +1,4 @@
+pandas>=2.2
+yfinance>=0.2.50
+psycopg[binary]>=3.2
+python-dotenv>=1.0

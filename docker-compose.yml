@@ -1,0 +1,38 @@
+# Local database for JSE News Signal.
+# Start:  docker compose up -d
+# Stop:   docker compose down        (data is kept in the named volume)
+# Reset:  docker compose down -v     (deletes all data)
+
+services:
+  db:
+    image: postgres:16
+    container_name: jns-postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      # Every .sql file in ./sql runs once, the first time the database is created.
+      - ./sql:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: jns-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
